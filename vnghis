@@ -1,43 +1,36 @@
--- Tạo một ScreenGui
-local screenGui = Instance.new("ScreenGui")
-screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+local screenGuii = Instance.new("ScreenGui")
+screenGuii.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
--- Tạo một TextLabel để hiển thị thông báo
 local textLabel = Instance.new("TextLabel")
-textLabel.Parent = screenGui
-textLabel.Size = UDim2.new(0, 600, 0, 100) -- Kích thước của TextLabel, điều chỉnh chiều rộng để phù hợp với thông báo
-textLabel.Position = UDim2.new(0.5, -300, 0.3, -50) -- Vị trí, hiển thị phía trên giữa màn hình
-textLabel.BackgroundTransparency = 1 -- Nền trong suốt
-textLabel.TextColor3 = Color3.new(1, 0.84, 0) -- Màu chữ vàng giống trong game Blox Fruits
+textLabel.Parent = screenGuii
+textLabel.Size = UDim2.new(0, 600, 0, 100) 
+textLabel.Position = UDim2.new(0.5, -300, 0.3, -50)
+textLabel.BackgroundTransparency = 1
+textLabel.TextColor3 = Color3.new(1, 0.84, 0)
 textLabel.Text = "Đây là bản script dành cho exploit pc free\ndo exploit pc mới vẫn chưa hỗ trợ nhiều \nnên script còn khá nhiều lỗi sẽ được update sau này"
-textLabel.Font = Enum.Font.Arcade -- Phông chữ giống như trong game Blox Fruits
-textLabel.TextScaled = true -- Tự động điều chỉnh kích thước chữ
-textLabel.TextStrokeTransparency = 0 -- Viền chữ đen, làm nổi bật chữ
-textLabel.TextStrokeColor3 = Color3.new(0, 0, 0) -- Màu viền chữ đen
-textLabel.TextWrapped = true -- Cho phép chữ xuống dòng tự động nếu vượt quá chiều rộng
+textLabel.Font = Enum.Font.Arcade 
+textLabel.TextScaled = true
+textLabel.TextStrokeTransparency = 0
+textLabel.TextStrokeColor3 = Color3.new(0, 0, 0) 
+textLabel.TextWrapped = true 
 
--- Hiệu ứng mờ dần khi thông báo xuất hiện và biến mất
 textLabel.TextTransparency = 1
 textLabel.TextStrokeTransparency = 1
 
--- Hiệu ứng xuất hiện
 for i = 1, 0, -0.05 do
     textLabel.TextTransparency = i
     textLabel.TextStrokeTransparency = i
     wait(0.05)
 end
 
--- Hiển thị thông báo trong 5 giây
 wait(10)
-
--- Hiệu ứng biến mất
 for i = 0, 1, 0.05 do
     textLabel.TextTransparency = i
     textLabel.TextStrokeTransparency = i
     wait(0.05)
 end
 
-screenGui:Destroy()
+screenGuii:Destroy()
 
 if game.CoreGui:FindFirstChild("SpeedHubX") then
     game.CoreGui:FindFirstChild("SpeedHubX"):Destroy()
