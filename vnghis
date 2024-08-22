@@ -11225,8 +11225,6 @@ end
   "Soul-Soul",
   "Dragon-Dragon"
  }
- 
- _G.SelectFruit = ""
  DevilFruit:Dropdown("Select Fruits Sniper",FruitList,function(value)
   _G.SelectFruit = value
   end)
